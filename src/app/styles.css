@@ -1,0 +1,417 @@
+/* ─────────────────────────────────────────────────────────
+   Digital Logic & Circuit Simulator  –  Styles
+   ───────────────────────────────────────────────────────── */
+
+/* ─── Reset & Base ─────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-dark: #0f1117;
+  --bg-panel: #181a22;
+  --bg-section: #1e2028;
+  --border: #2a2d35;
+  --border-hover: #3e4250;
+  --text: #c8cad0;
+  --text-dim: #777a85;
+  --accent: #6c8cff;
+  --accent-glow: #6c8cff44;
+  --green: #4cff72;
+  --green-dim: #3a8b4a;
+  --red: #ff4c4c;
+  --red-dim: #8b3a3a;
+  --yellow: #ffe066;
+
+  --toolbar-width: 220px;
+  --radius: 8px;
+  --radius-sm: 4px;
+  --font: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-dark);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ─── Toolbar (Left Panel) ──────────────────────────── */
+
+#toolbar {
+  width: var(--toolbar-width);
+  min-width: var(--toolbar-width);
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 10;
+  user-select: none;
+}
+
+#toolbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+#toolbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#toolbar::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.toolbar-header {
+  padding: 16px 16px 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.toolbar-header h1 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.toolbar-header .version {
+  font-size: 10px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.toolbar-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.toolbar-section h3 {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+/* ─── Tool Buttons ─────────────────────────────────── */
+
+.tool-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.tool-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-section);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tool-btn:hover {
+  border-color: var(--border-hover);
+  background: #252730;
+}
+
+.tool-btn.active {
+  border-color: var(--accent);
+  background: #1e2240;
+  color: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.tool-btn .btn-icon {
+  font-size: 14px;
+}
+
+.tool-btn .btn-label {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* ─── Component Palette ──────────────────────────────── */
+
+.component-palette {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.comp-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-section);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.comp-btn:hover {
+  border-color: var(--border-hover);
+  background: #252730;
+  transform: translateY(-1px);
+}
+
+.comp-btn.active {
+  border-color: var(--accent);
+  background: #1e2240;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.comp-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.comp-label {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+}
+
+.comp-btn.active .comp-label {
+  color: var(--accent);
+}
+
+/* ─── Simulation Controls ──────────────────────────── */
+
+.sim-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.sim-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-section);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sim-btn:hover {
+  border-color: var(--border-hover);
+  background: #252730;
+}
+
+.sim-btn.active,
+.play-btn.active {
+  border-color: var(--green);
+  background: #1a2e1a;
+  color: var(--green);
+  box-shadow: 0 0 8px #4cff7222;
+}
+
+.sim-btn .btn-icon {
+  font-size: 12px;
+}
+
+.sim-btn .btn-label {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* ─── Action Buttons ──────────────────────────────── */
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-section);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.action-btn:hover {
+  border-color: var(--border-hover);
+  background: #252730;
+}
+
+.action-btn.danger:hover {
+  border-color: var(--red);
+  background: #2e1a1a;
+  color: var(--red);
+}
+
+.action-btn .btn-icon {
+  font-size: 14px;
+}
+
+.action-btn .btn-label {
+  font-size: 11px;
+}
+
+/* ─── Info Panel ──────────────────────────────────── */
+
+.toolbar-info {
+  margin-top: auto;
+  border-bottom: none;
+  border-top: 1px solid var(--border);
+}
+
+.info-content p {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.info-content p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ─── Canvas Wrapper ──────────────────────────────── */
+
+#canvas-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: #0f1117;
+}
+
+#circuit-svg {
+  display: block;
+  cursor: default;
+  transition: transform 0.05s ease;
+}
+
+/* Pin hover effect */
+.pin:hover {
+  r: 6;
+  stroke-width: 2;
+  filter: brightness(1.5);
+}
+
+/* Component hover effect */
+.component:hover {
+  filter: brightness(1.1);
+}
+
+/* ─── Status Bar ──────────────────────────────────── */
+
+#status-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 16px;
+  font-size: 11px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  z-index: 10;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+
+.status-dot.running {
+  background: var(--green);
+  box-shadow: 0 0 6px var(--green);
+  animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ─── Tooltip (future use) ────────────────────────── */
+
+.tooltip {
+  position: absolute;
+  background: #222;
+  color: #eee;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  pointer-events: none;
+  z-index: 100;
+  white-space: nowrap;
+}
+
+/* ─── Brand / home link ─────────────────────────────────── */
+.toolbar-brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.15s ease;
+}
+.toolbar-brand:hover {
+  color: var(--accent);
+}

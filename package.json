@@ -1,0 +1,37 @@
+{
+  "name": "logicforge",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "LogicForge — a real-time digital logic & circuit simulator for the browser. Place gates, switches, clocks and bulbs, auto-route wires, and watch signals propagate live.",
+  "license": "MIT",
+  "author": "Shahriar Ahmed",
+  "homepage": "https://github.com/shahriar-ahmed-seam/logicforge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shahriar-ahmed-seam/logicforge.git"
+  },
+  "keywords": [
+    "logic-gates",
+    "circuit-simulator",
+    "digital-logic",
+    "electronics",
+    "simulation",
+    "typescript",
+    "vite",
+    "svg",
+    "education",
+    "interactive"
+  ],
+  "scripts": {
+    "fetch:images": "node scripts/fetch-images.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/fetch-images.mjs",
+    "build": "tsc && vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.3.5"
+  }
+}

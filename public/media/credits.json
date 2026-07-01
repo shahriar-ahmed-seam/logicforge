@@ -1,0 +1,35 @@
+{
+  "provider": "Unsplash",
+  "assets": [
+    {
+      "file": "hero.jpg",
+      "author": "Vishnu Mohanan",
+      "authorUrl": "https://unsplash.com/@vishnumaiea?utm_source=logicforge&utm_medium=referral",
+      "source": "https://unsplash.com/photos/close-up-of-dark-blue-circuit-board-pfR18JNEMv8?utm_source=logicforge&utm_medium=referral"
+    },
+    {
+      "file": "feature-gates.jpg",
+      "author": "Harrison Broadbent",
+      "authorUrl": "https://unsplash.com/@harrisonbroadbent?utm_source=logicforge&utm_medium=referral",
+      "source": "https://unsplash.com/photos/blue-circuit-board-19YCOjHosDk?utm_source=logicforge&utm_medium=referral"
+    },
+    {
+      "file": "feature-wires.jpg",
+      "author": "John Barkiple",
+      "authorUrl": "https://unsplash.com/@barkiple?utm_source=logicforge&utm_medium=referral",
+      "source": "https://unsplash.com/photos/assorted-electric-cables-l090uFWoPaI?utm_source=logicforge&utm_medium=referral"
+    },
+    {
+      "file": "feature-sim.jpg",
+      "author": "Conny Schneider",
+      "authorUrl": "https://unsplash.com/@choys_?utm_source=logicforge&utm_medium=referral",
+      "source": "https://unsplash.com/photos/a-blue-background-with-lines-and-dots-xuTJZ7uD7PI?utm_source=logicforge&utm_medium=referral"
+    },
+    {
+      "file": "showcase.jpg",
+      "author": "Arnold Katz",
+      "authorUrl": "https://unsplash.com/@arnold_katz_?utm_source=logicforge&utm_medium=referral",
+      "source": "https://unsplash.com/photos/black-and-white-electric-keyboard-TGFOArhlHYU?utm_source=logicforge&utm_medium=referral"
+    }
+  ]
+}

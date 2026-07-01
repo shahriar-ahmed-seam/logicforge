@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LogicForge — A Digital Logic & Circuit Simulator in the Browser</title>
+  <meta name="description" content="LogicForge is a real-time digital logic sandbox. Drop in gates, switches, clocks and bulbs, wire them with auto-routed connections, and watch signals propagate live — right in your browser." />
+  <meta name="theme-color" content="#0f1117" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LogicForge — Digital Logic & Circuit Simulator" />
+  <meta property="og:description" content="Build and simulate logic circuits in real time. Gates, clocks, switches, auto-routed wires — all in the browser." />
+  <meta property="og:image" content="/media/hero.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/landing/landing.css" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a class="nav__brand" href="/">⚡ Logic<b>Forge</b></a>
+    <div class="nav__links">
+      <a href="#features">Features</a>
+      <a href="#gates">Gates</a>
+      <a href="#engine">Engine</a>
+      <a class="nav__cta" href="/simulator">Launch Simulator →</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__bg" style="background-image:url('/media/hero.jpg')"></div>
+    <div class="hero__scrim"></div>
+    <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero__content">
+      <span class="hero__eyebrow reveal">Real-time · Event-driven · Zero dependencies</span>
+      <h1 class="hero__title reveal">Build logic.<br /><span class="grad">Watch it think.</span></h1>
+      <p class="hero__lead reveal">
+        LogicForge is a browser-native digital logic sandbox. Drop in gates, switches,
+        clocks and bulbs, connect them with auto-routed wires, and see signals ripple
+        through your circuit in real time.
+      </p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary" href="/simulator">Launch the Simulator</a>
+        <a class="btn btn--ghost" href="#features">Explore features</a>
+      </div>
+      <div class="hero__stats reveal">
+        <div><b data-count="9">0</b><span>component types</span></div>
+        <div><b data-count="0">0</b><span>runtime deps</span></div>
+        <div><b data-count="60">0</b><span>fps live sim</span></div>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#features" aria-label="Scroll"><span></span></a>
+  </header>
+
+  <section class="section" id="features">
+    <div class="section__head reveal">
+      <p class="kicker">A logic bench in the browser</p>
+      <h2>From a single gate to a full adder.</h2>
+      <p class="sub">Everything updates the instant you flip a switch. No compile step,
+        no wiring diagrams on paper — just build and observe.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card card--wide reveal">
+        <div class="card__media" style="background-image:url('/media/feature-gates.jpg')"></div>
+        <div class="card__body">
+          <h3>Every fundamental gate</h3>
+          <p>AND, OR, XOR, NOT, NAND and NOR — plus switches, clocks and lightbulbs to
+            drive and observe your circuit. Compose them into anything.</p>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon">🔀</div>
+        <h3>Auto-routed wiring</h3>
+        <p>Grid-aware pathfinding lays out clean, orthogonal wires between pins automatically.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon">⏱️</div>
+        <h3>Clocks & live signals</h3>
+        <p>Add a clock and watch state propagate through the whole graph, tick by tick.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon">🖱️</div>
+        <h3>Pan, zoom & place</h3>
+        <p>A smooth, infinite canvas with grid snapping and an intuitive component palette.</p>
+      </article>
+
+      <article class="card card--wide reveal">
+        <div class="card__media card__media--sm" style="background-image:url('/media/feature-wires.jpg')"></div>
+        <div class="card__body">
+          <h3>Instant, event-driven simulation</h3>
+          <p>A dependency-aware evaluator recomputes only what changed, so even large
+            circuits stay responsive as you toggle inputs.</p>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon">💡</div>
+        <h3>Live status readout</h3>
+        <p>Component and wire counts, zoom level and run state, always visible.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="engine" id="gates">
+    <div class="engine__inner reveal">
+      <p class="kicker">The toolkit</p>
+      <h2>Nine building blocks. Infinite circuits.</h2>
+      <div class="engine__grid">
+        <div><b>AND / NAND</b><span>Conjunction and its inverse</span></div>
+        <div><b>OR / NOR</b><span>Disjunction and its inverse</span></div>
+        <div><b>XOR</b><span>Exclusive-or for adders & parity</span></div>
+        <div><b>NOT</b><span>The humble inverter</span></div>
+        <div><b>SWITCH</b><span>Toggle an input by hand</span></div>
+        <div><b>CLOCK</b><span>Auto-oscillating signal source</span></div>
+        <div><b>LIGHTBULB</b><span>Visualize any output line</span></div>
+        <div><b>WIRE</b><span>Auto-routed pin-to-pin connections</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase" id="engine">
+    <div class="showcase__media" style="background-image:url('/media/showcase.jpg')"></div>
+    <div class="showcase__scrim"></div>
+    <div class="showcase__content reveal">
+      <h2>Prototype a circuit in seconds,<br />not on a breadboard.</h2>
+      <p>Start from a worked demo — two switches into an AND gate, an inverter, an XOR —
+        then rewire it into whatever you're learning next.</p>
+      <a class="btn btn--primary" href="/simulator">Open the Simulator</a>
+    </div>
+  </section>
+
+  <section class="cta reveal">
+    <h2>Ready to wire something up?</h2>
+    <p>No install. No account. Just open the bench and start building.</p>
+    <a class="btn btn--primary btn--lg" href="/simulator">Launch LogicForge →</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__brand">⚡ Logic<b>Forge</b></div>
+    <p class="footer__note">Built with TypeScript, SVG &amp; an event-driven simulation core.
+      Imagery via <a href="https://unsplash.com?utm_source=logicforge&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>.</p>
+    <p class="footer__copy">© <span id="year"></span> LogicForge. A browser-native logic simulator.</p>
+  </footer>
+
+  <script type="module" src="/src/landing/landing.ts"></script>
+</body>
+</html>
