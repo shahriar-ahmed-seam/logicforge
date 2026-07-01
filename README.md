@@ -9,7 +9,7 @@
 Drop in gates, switches, clocks and bulbs, wire them with auto-routed connections,
 and watch signals propagate through your circuit — live, at 60fps.
 
-[**Launch the Simulator →**](https://logicforge.vercel.app/simulator) · [Landing page](https://logicforge.vercel.app)
+[**Launch the Simulator →**](https://logicforge-bice.vercel.app/simulator) · [Landing page](https://logicforge-bice.vercel.app)
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-6-646cff?logo=vite&logoColor=white)
